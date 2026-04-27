@@ -5,10 +5,17 @@ import { Step3PersonTableInput } from './components/step3-person-table-input/ste
 import { IPerson } from './shared/interfaces/person';
 import { Step4ForDirective } from './components/step4-for-directive/step4-for-directive';
 import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
+import { Step6Welcome } from './components/step6-welcome/step6-welcome';
 
 @Component({
   selector: 'app-root',
-  imports: [Step2PersonTable, Step3PersonTableInput, Step4ForDirective, Step5EventBind],
+  imports: [
+    Step2PersonTable,
+     Step3PersonTableInput,
+      Step4ForDirective,
+       Step5EventBind,
+        Step6Welcome,
+         RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -32,4 +39,6 @@ export class App {
     lastname: "lastname2",
     email: "lastname2@aueb.gr"
   }
+
+  doNotShowComponents: boolean = true;
 }
