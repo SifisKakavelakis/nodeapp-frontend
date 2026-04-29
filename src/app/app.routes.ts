@@ -6,6 +6,8 @@ import { Step5EventBind } from './components/step5-event-bind/step5-event-bind';
 import { Step6Welcome } from './components/step6-welcome/step6-welcome';
 import { Step8SimpleDataTableShow } from './components/step8-simple-data-table-show/step8-simple-data-table-show';
 import { Step9ComponentOutput } from './components/step9-component-output/step9-component-output';
+import { Step10TempletaDrivenForms } from './components/step10-templeta-driven-forms/step10-templeta-driven-forms';
+import { Step11ReactiveForms } from './components/step11-reactive-forms/step11-reactive-forms';
 
 export const routes: Routes = [
     {path:'person-table-example', component:Step2PersonTable},
@@ -15,5 +17,7 @@ export const routes: Routes = [
     {path:'simple-datatable-example', component:Step8SimpleDataTableShow},
     {path:'component-output-example', component:Step9ComponentOutput},
     {path:'welcome', component:Step6Welcome},
+    {path:'template-driven-form-example', component:Step10TempletaDrivenForms},
+    {path:'reactive-form-example', component:Step11ReactiveForms},
     {path:'', redirectTo:'/welcome', pathMatch:'full'}
 ];
