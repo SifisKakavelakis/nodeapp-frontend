@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Navbar } from './navbar';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('Navbar', () => {
   let component: Navbar;
@@ -8,7 +9,7 @@ describe('Navbar', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Navbar],
+      imports: [Navbar, MatIconModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Navbar);

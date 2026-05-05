@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { Credentials, LoggedInUser } from '../interfaces/user-login.interface';
 import { Router } from '@angular/router';
-import { jwtDecode } from 'jwt-decode';
+import { jwtDecode, JwtDecodeOptions } from 'jwt-decode';
 
 const API_AUTH_URL = `${environment.apiURL}/api/auth`;
 
@@ -46,5 +46,21 @@ export class UserService {
     this.user.set(null);
     localStorage.removeItem('access_token');
     this.router.navigate(['user-login']);
+  }
+
+  isTokenExpired(): boolean {
+    const token = localStorage.getItem('access_token');
+    if (!token)
+      return true
+
+    try {
+      const decoded: any =  jwtDecode(token);
+      console.log("DECODED", decoded);
+      const exp = decoded.exp;
+      const now = Math.floor(Date.now()/1000);
+      return exp < now
+    } catch (e){
+      return true
+    }
   }
 }

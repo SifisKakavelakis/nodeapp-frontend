@@ -18,6 +18,7 @@ export class Step7ListGroupMenu {
     { text: "Step10 Template Forms", appLink:'template-driven-form-example'},
     { text: "Step11 Reactive Forms", appLink: 'reactive-form-example'},
     { text: "Step12 Http Client", appLink: 'http-client-example'},
-    { text: "Step13 User Login", appLink: 'user-login'}
+    { text: "Step13 User Login", appLink: 'user-login'},
+    { text: "Restricted Content", appLink: 'restricted-content'}
   ]
 }
